@@ -8,7 +8,7 @@
 		<email>crank@qcrypt.org</email>
 		<name>Q-Crypt Foundation</name>
 	</owner>
-	<!--<source type="git">git://github.com/edoceo/praxis.git</source>
-	<feed>https://github.com/edoceo/praxis/commits/master.atom</feed>-->
+	<source type="git">git://github.com/CrankOne/q-crypt-hep-overlay.git</source>
+    <feed>https://github.com/CrankOne/q-crypt-hep-overlay/commits/master.atom</feed>
 </repo>
 </repositories>
