@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <repositories version="1.0">
 <repo priority="50" status="unofficial">
-	<name>q-crypt-hep</name>
-	<description>Q-Crypt HEP lab overlay</description>
-	<homepage>http://crank.qcrypt.org/</homepage>
-	<owner>
-		<email>crank@qcrypt.org</email>
-		<name>Q-Crypt Foundation</name>
-	</owner>
-	<source type="git">https://github.com/CrankOne/q-crypt-hep-overlay.git</source>
+  <name>q-crypt-hep</name>
+  <description>Q-Crypt HEP lab overlay</description>
+  <homepage>http://crank.qcrypt.org/</homepage>
+    <owner>
+      <email>crank@qcrypt.org</email>
+      <name>Q-Crypt Foundation</name>
+    </owner>
+    <source type="git">https://cdn.rawgit.com/CrankOne/q-crypt-hep-overlay/master/q-crypt-hep-overlay.xml</source>
     <feed>https://github.com/CrankOne/q-crypt-hep-overlay/commits/master.atom</feed>
 </repo>
 </repositories>
