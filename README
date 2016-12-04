@@ -13,6 +13,6 @@ How to add
 
 Using layman:
 
-    # layman -o https://cdn.rawgit.com/CrankOne/q-crypt-hep-overlay/master/q-crypt-hep-overlay.xml --list
-    # layman -f -o https://cdn.rawgit.com/CrankOne/q-crypt-hep-overlay/master/q-crypt-hep-overlay.xml -a q-crypt-hep
+    # layman -o https://raw.githubusercontent.com/CrankOne/q-crypt-hep-overlay/master/q-crypt-hep-overlay.xml --list
+    # layman -f -o https://raw.githubusercontent.com/CrankOne/q-crypt-hep-overlay/master/q-crypt-hep-overlay.xml -a q-crypt-hep
 
