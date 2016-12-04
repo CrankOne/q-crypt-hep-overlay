@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+<repo priority="50" status="unofficial">
+	<name>q-crypt-hep</name>
+	<description>Q-Crypt HEP lab overlay</description>
+	<homepage>http://crank.qcrypt.org/</homepage>
+	<owner>
+		<email>crank@qcrypt.org</email>
+		<name>Q-Crypt Foundation</name>
+	</owner>
+	<!--<source type="git">git://github.com/edoceo/praxis.git</source>
+	<feed>https://github.com/edoceo/praxis/commits/master.atom</feed>-->
+</repo>
+</repositories>

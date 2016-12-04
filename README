@@ -1,0 +1,8 @@
+Q-Crypt/HEP Gentoo Overlay
+
+This overlay contains ebuilds devoted mostly to High-Energy Physics (HEP). There
+also some customization of packages outdated in oficial Gentoo overlay.
+
+All these ebuilds are maintained under the auspices of HEP Laboratory and can be
+re-distributed under GPL-2 license.
+
