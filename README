@@ -1,8 +1,18 @@
 Q-Crypt/HEP Gentoo Overlay
+==========================
 
 This overlay contains ebuilds devoted mostly to High-Energy Physics (HEP). There
 also some customization of packages outdated in oficial Gentoo overlay.
 
 All these ebuilds are maintained under the auspices of HEP Laboratory and can be
 re-distributed under GPL-2 license.
+
+
+How to add
+----------
+
+Using layman:
+
+    # layman -o https://cdn.rawgit.com/CrankOne/q-crypt-hep-overlay/master/q-crypt-hep-overlay.xml --list
+    # layman -f -o https://cdn.rawgit.com/CrankOne/q-crypt-hep-overlay/master/q-crypt-hep-overlay.xml -a q-crypt-hep
 
