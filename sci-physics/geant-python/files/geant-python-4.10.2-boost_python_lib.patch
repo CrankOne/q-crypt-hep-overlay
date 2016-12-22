@@ -1,0 +1,11 @@
+--- ./CMakeLists.txt	2016-10-23 21:43:17.000000000 +0000
++++ /tmp/CMakeLists.txt	2016-10-23 21:42:52.000000000 +0000
+@@ -27,7 +27,7 @@
+ find_package(Geant4 REQUIRED)
+ find_package(PythonInterp REQUIRED)
+ find_package(PythonLibs REQUIRED)
+-find_package(Boost)
++find_package(Boost COMPONENTS python REQUIRED)
+ find_package(XercesC)
+ find_package(ROOT)
+ 
