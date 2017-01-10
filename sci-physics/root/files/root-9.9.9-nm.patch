@@ -1,0 +1,12 @@
+diff -Naur a/configure b/configure
+--- a/configure	2016-11-26 16:49:33.582620870 +0700
++++ b/configure	2016-11-26 16:48:50.710852935 +0700
+@@ -1167,7 +1167,7 @@
+     fi
+ 
+     checking_msg "$symbol in $symbolfile"
+-    nm $symbolfile 2>&1 | grep $symbol > /dev/null 2>&1
++    nm --dynamic $symbolfile 2>&1 | grep $symbol > /dev/null 2>&1
+     if test $? -eq 0 ; then
+         found_symbol=1
+         logmsg " Symbol found"
