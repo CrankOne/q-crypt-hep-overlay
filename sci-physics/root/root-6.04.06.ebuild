@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -16,11 +15,11 @@ SRC_URI="https://root.cern.ch/download/${PN}_v${PV}.source.tar.gz"
 SLOT="0/$(get_version_component_range 1-3 ${PV})"
 LICENSE="LGPL-2.1 freedist MSttfEULA LGPL-3 libpng UoI-NCSA"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+X afs doc emacs examples fits fftw gdml geocad
+IUSE="+X afs debug doc emacs examples fits fftw gdml geocad
 	graphviz http kerberos ldap +math +memstat mpi mysql odbc
 	+opengl openmp oracle postgres prefix pythia6 pythia8
-	python qt4 R shadow sqlite ssl table +tiff xinetd xml xrootd
-	zeroconf"
+	python qt4 R shadow sqlite ssl static-libs table +tiff xinetd
+	xml xrootd zeroconf"
 
 # TODO: add support for: davix
 # TODO: ROOT-6 supports x32 ABI, but half of its dependencies doesn't
@@ -402,6 +401,11 @@ src_compile() {
 		ROOTSYS="${S}" \
 		LD_LIBRARY_PATH="${S}/lib"
 	use emacs && elisp-compile build/misc/*.el
+	use static-libs && emake static \
+		OPT="${CXXFLAGS}" \
+		F77OPT="${FFLAGS}" \
+		ROOTSYS="${S}" \
+		LD_LIBRARY_PATH="${S}/lib"
 }
 
 daemon_install() {
@@ -480,7 +484,7 @@ src_install() {
 	desktop_install
 	cleanup_install
 
-	# do not copress files used by ROOT's CLI (.credit, .demo, .license)
+	# do not compress files used by ROOT's CLI (.credit, .demo, .license)
 	docompress -x "${DOC_DIR}"/{CREDITS,examples/tutorials}
 }
 

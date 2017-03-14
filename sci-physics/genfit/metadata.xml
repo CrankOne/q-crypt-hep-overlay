@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>crank@qcrypt.org</email>
+		<name>Renat Dusaev</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">CrankOne/GenFit</remote-id>
+	</upstream>
+	<longdescription lang="en">
+	GenFit is an experiment-independent framework for track reconstruction for
+	particle and nuclear physics. It consists of three modular components:
+	track fitting algorithms, track representations, and measurements suitable
+	for for efficient track representation, reconstruction, and storaging.
+	</longdescription>
+</pkgmetadata>
+

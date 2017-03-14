@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -15,10 +14,11 @@ SRC_URI=""
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="allocators +colors gds haskell ptree streams tensors +unwind +test"
+IUSE="allocators +color gds haskell ptree streams tensors +stacktrace +unit-tests
+	  static-libs"
 
 if [[ ${PV} != 9999* ]] ; then
-    KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~x86"
 	EGIT_BRANCH=development
 fi
 
@@ -27,10 +27,10 @@ RDEPEND=" gds? ( virtual/yacc )
 DEPEND="${RDEPEND}"
 
 src_configure() {
-    local mycmakeargs=(
+	local mycmakeargs=(
 		-DTYPES_128BIT_LENGTH=OFF
-        -DSOURCE_POSITION_INFO=OFF
-        -DEM_STACK_UNWINDING=$(usex unwind)
+		-DSOURCE_POSITION_INFO=OFF
+		-DEM_STACK_UNWINDING=$(usex stacktrace)
 		-DANSI_ESCSEQ_PRINT=$(usex colors)
 		-DENABLE_GDS=$(usex gds)
 		-DENABLE_ALLOCATORS=$(usex allocators)
@@ -38,18 +38,18 @@ src_configure() {
 		-DENABLE_DATASTREAMS=$(usex streams)
 		-DENABLE_PTREE=$(usex ptree)
 		-DHASKELL_MODULE=$(usex haskell)
-        -Dbuild_unit_tests=$(usex test)
-		-Dbuild_system_tests=$(usex test)
-    )   
+		-DBUILD_STATIC_LIBRARIES=$(usex static-libs)
+		-Dbuild_unit_tests=$(usex unit-test)
+		-Dbuild_system_tests=$(usex unit-test)
+	)
 
-    cmake-utils_src_configure
+	cmake-utils_src_configure
 }
 
 src_compile() {
-    cmake-utils_src_compile
+	cmake-utils_src_compile
 }
 
 src_install() {
-    cmake-utils_src_install
+	cmake-utils_src_install
 }
-
