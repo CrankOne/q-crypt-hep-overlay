@@ -242,10 +242,10 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.32.00-afs.patch \
 		"${FILESDIR}"/${PN}-5.32.00-cfitsio.patch \
 		"${FILESDIR}"/${PN}-5.32.00-chklib64.patch \
-		"${FILESDIR}"/${PN}-5.34.13-unuran.patch \
 		"${FILESDIR}"/${PN}-6.00.01-dotfont.patch \
 		"${FILESDIR}"/${PN}-6.04.06-prop-flags.patch \
 		"${FILESDIR}"/${PN}-6.08.06-nobyte-compile.patch \
+		"${FILESDIR}"/${PN}-6.08.06-unuran.patch \
 		"${FILESDIR}"/${PN}-9.9.9-nm.patch
 		# "${FILESDIR}"/${PN}-6.02.05-xrootd4.patch
 		# "${FILESDIR}"/${PN}-6.02.05-dictpch.patch \
