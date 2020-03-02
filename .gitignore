@@ -1,0 +1,10 @@
+*.bak
+*.swp
+*.swo
+*.pyc
+*.elf
+*.o
+*.gch
+*.a
+*.zargo~
+*~

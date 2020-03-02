@@ -1,0 +1,6 @@
+# Defines custom profiles within q-crypt-hep repository
+#
+# layout
+# arch      profile_directory   status
+amd64       binfarm/opt         dev
+amd64       binfarm/debug       dev

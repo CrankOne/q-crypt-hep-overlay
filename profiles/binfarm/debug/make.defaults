@@ -1,0 +1,7 @@
+# Configuration for system-wide debug
+FEATURES="${FEATURES} splitdebug compressdebug -nostrip"
+COMMON_FLAGS="-march=x86-64 -Og -pipe -ggdb"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"

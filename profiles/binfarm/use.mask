@@ -1,0 +1,4 @@
+# USE flags inherited by the base/use.defaults file that shouldn't be in Prefix
+gpm
+# we do not need this at all
+systemd

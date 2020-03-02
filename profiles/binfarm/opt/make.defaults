@@ -1,0 +1,6 @@
+# Flags for optimized build
+COMMON_FLAGS="-march=x86-64 -O2 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
