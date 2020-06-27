@@ -26,7 +26,7 @@ PKGDIR="/var/cache/binpkgs"     # former /hepfarm/pkg
 
 LC_MESSAGES=C
 
-PYTHON_SINGLE_TARGET="python3_8"
-PYTHON_TARGETS="python2_7 python3_8"
+PYTHON_SINGLE_TARGET="python3_7"
+PYTHON_TARGETS="python2_7 python3_7"
 
 USE="sqlite"
