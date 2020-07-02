@@ -5,8 +5,13 @@
 		<email>crank@qcrypt.org</email>
 		<name>Renat Dusaev</name>
 	</maintainer>
+	<use>
+    	<flag name="test">Enables build provided unit tests</flag>
+    	<flag name="doc">Enables documentation generation</flag>
+		<flag name="rave">Enables integration with RAVE toolkit</flag>
+	</use>
 	<upstream>
-		<remote-id type="github">CrankOne/GenFit</remote-id>
+		<remote-id type="github">GenFit/GenFit</remote-id>
 	</upstream>
 	<longdescription lang="en">
 	GenFit is an experiment-independent framework for track reconstruction for

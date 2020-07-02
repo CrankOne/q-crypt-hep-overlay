@@ -6,21 +6,20 @@
 		<name>Renat Dusaev</name>
 	</maintainer>
 	<use>
-    <flag name="test">Enables build provided unit tests</flag>
-    <flag name="static">Enables static libraries compilation</flag>
-    <flag name="java">Enables java bindings (enabled by default)</flag>
-    <flag name="flavortagging">Flavor-tagging support (enabled by default)</flag>
-    <flag name="kinematics">Kinematic fitting (enabled by default)</flag>
-    <flag name="algorithm-zvres">zvres algorithm (enabled by default)</flag>
-    <flag name="algorithm-ttf">ttf algorithm (disabled by default)</flag>
-    <flag name="algotithm-mvf">algorithm (enabled by default)</flag>
-    <flag name="algorithm-gsf">gsf algorithm (enabled by default)</flag>
-    <flag name="algorithm-tkvf">tkvf algorithm (enabled by default)</flag>
-    <flag name="development">developers classes (e.g. special linpt finders etc.)</flag>
-	<flag name="static">Enables static libraries build.</flag>
-	<flag name="test">Enables unittests</flag>
-	<flag name="boost">Enables boost dependency</flag>
-	<flag name="clhep">Enables CLHEP dependency</flag>
+    	<flag name="test">Enables build provided unit tests</flag>
+    	<flag name="static">Enables static libraries compilation</flag>
+    	<flag name="java">Enables java bindings (enabled by default)</flag>
+    	<flag name="flavortagging">Flavor-tagging support (enabled by default)</flag>
+    	<flag name="kinematics">Kinematic fitting (enabled by default)</flag>
+    	<flag name="algorithm-zvres">zvres algorithm (enabled by default)</flag>
+    	<flag name="algorithm-ttf">ttf algorithm (disabled by default)</flag>
+    	<flag name="algotithm-mvf">algorithm (enabled by default)</flag>
+    	<flag name="algorithm-gsf">gsf algorithm (enabled by default)</flag>
+    	<flag name="algorithm-tkvf">tkvf algorithm (enabled by default)</flag>
+    	<flag name="development">developers classes (e.g. special linpt finders etc.)</flag>
+		<flag name="static">Enables static libraries build.</flag>
+		<flag name="test">Enables unittests</flag>
+		<flag name="boost">Enables boost dependency</flag>
 	</use>
 	<longdescription lang="en">
 		A toolkit is presented that takes a set of reconstructed particle tracks as its input and produces reconstructed interaction vertices as its output. It deals both with finding (pattern recognition) and with fitting (statistical estimation) of the interaction vertices.
