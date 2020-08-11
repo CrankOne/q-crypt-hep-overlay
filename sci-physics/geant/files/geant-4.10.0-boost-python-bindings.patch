@@ -1,0 +1,23 @@
+Changes required for recent versions of Boost library to integrate Python bindings.
+--- a/environments/g4py/CMakeLists.txt	2020-08-11 08:28:43.205124919 -0000
++++ b/environments/g4py/CMakeLists.txt	2020-08-11 08:30:12.547822132 -0000
+@@ -8,7 +8,7 @@
+ # which Python an install of Boost Python uses)...
+ find_package(PythonInterp 3.0 REQUIRED)
+ find_package(PythonLibs REQUIRED)
+-find_package(Boost REQUIRED python)
++find_package(Boost COMPONENTS python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR} REQUIRED)
+ 
+ # Variables and Functions to help build, organise, and install modules
+ include(${CMAKE_CURRENT_SOURCE_DIR}/G4PythonHelpers.cmake)
+--- a/environments/g4py/G4PythonHelpers.cmake	2020-05-29 11:42:50.000000000 -0000
++++ b/environments/g4py/G4PythonHelpers.cmake	2020-08-11 08:30:29.371765142 -0000
+@@ -39,7 +39,7 @@
+   # Use dynamic_lookup on Darwin to avoid direct linking to libpython (Linux has this as default,
+   # to be checked for Windows)
+   target_include_directories(${target_name} PRIVATE ${PYTHON_INCLUDE_DIRS})
+-  target_link_libraries(${target_name} PRIVATE Boost::python "$<$<PLATFORM_ID:Darwin>:-undefined dynamic_lookup>")
++  target_link_libraries(${target_name} PRIVATE Boost::python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR} "$<$<PLATFORM_ID:Darwin>:-undefined dynamic_lookup>")
+ endfunction()
+ 
+ 
